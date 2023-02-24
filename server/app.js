@@ -187,7 +187,7 @@ app.get("/userData", (req, res) => {
 
 app.get("/countStatus", (req, res) => {
   db.query(
-    "SELECT COUNT(CASE WHEN b_status = 'Available' THEN 1 ELSE null end) AS availableCount,COUNT(CASE WHEN b_status = 'Pending' THEN 1 ELSE null END) AS pendingCount,COUNT(CASE WHEN b_status = 'Booked' THEN 1 ELSE null END)AS bookedCount FROM h_booking",
+    "SELECT COUNT(CASE WHEN r_status = 'Available' THEN 1 ELSE null end) AS availableCount,COUNT(CASE WHEN r_status = 'Pending' THEN 1 ELSE null END) AS pendingCount,COUNT(CASE WHEN r_status = 'Booked' THEN 1 ELSE null END)AS bookedCount FROM h_room",
     (err, result) => {
       if (err) {
         res.json({ status: "error", msg: { err } });

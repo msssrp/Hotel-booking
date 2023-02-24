@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
-import ImgProfile from "../img/46112449_1355964631207176_7771925368595808256_n.jpg";
 import { useNavigate , Link } from 'react-router-dom';
+import ImgProfile from "../img/user-avatar.png"
 function Navbaradmin() {
     const navigate = useNavigate();
     const [isOpen, setIsOpen] = useState(false);

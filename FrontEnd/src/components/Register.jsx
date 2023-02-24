@@ -72,9 +72,7 @@ function Register() {
           progress: undefined,
           theme: "light",
         });
-        setTimeout(() => {
-          navigate("/sign-in");
-        }, 5000);
+       
       } else {
         toast.error(`${res.data.msg}`, {
           position: "top-right",
